@@ -38,6 +38,8 @@ class Scenario:
         st.session_state[f'{self.key}_step'] = 0
         st.session_state[f'{self.key}_score'] = 0
         st.session_state[f'{self.key}_history'] = []
+        if f'{self.key}_show_continue' in st.session_state:
+            del st.session_state[f'{self.key}_show_continue']
     
     def get_current_step(self):
         """Retorna step atual"""
@@ -93,6 +95,30 @@ class Scenario:
         </div>
         ''', unsafe_allow_html=True)
         
+        # Se já mostrou feedback, mostra botão continuar
+        if st.session_state.get(f'{self.key}_show_continue', False):
+            # Pega último item do histórico para mostrar feedback
+            last_choice = self.get_history()[-1]
+            
+            # Mostra feedback novamente
+            if last_choice['pontos'] >= 2:
+                st.success(f"✅ {last_choice['feedback']}")
+                st.info(f"💬 **{self.nome} responde:** {last_choice['resposta']}")
+            elif last_choice['pontos'] >= 0:
+                st.warning(f"⚠️ {last_choice['feedback']}")
+                st.info(f"💬 **{self.nome} responde:** {last_choice['resposta']}")
+            else:
+                st.error(f"❌ {last_choice['feedback']}")
+                st.info(f"💬 **{self.nome} responde:** {last_choice['resposta']}")
+            
+            st.markdown("<br>", unsafe_allow_html=True)
+            
+            if st.button("➡️ Próxima Pergunta", type="primary", key=f"continue_{self.key}_{current_step}"):
+                st.session_state[f'{self.key}_show_continue'] = False
+                st.rerun()
+            
+            st.stop()  # Para não mostrar as opções novamente
+        
         st.markdown("### Como você responde?")
         
         # Mostrar opções
@@ -110,19 +136,8 @@ class Scenario:
                 st.session_state[f'{self.key}_score'] += opcao['pontos']
                 st.session_state[f'{self.key}_step'] += 1
                 
-                # Mostrar feedback imediato
-                if opcao['pontos'] >= 2:
-                    st.success(f"✅ {opcao['feedback']}")
-                    st.info(f"💬 **{self.nome} responde:** {opcao['resposta_cliente']}")
-                elif opcao['pontos'] >= 0:
-                    st.warning(f"⚠️ {opcao['feedback']}")
-                    st.info(f"💬 **{self.nome} responde:** {opcao['resposta_cliente']}")
-                else:
-                    st.error(f"❌ {opcao['feedback']}")
-                    st.info(f"💬 **{self.nome} responde:** {opcao['resposta_cliente']}")
-                
-                # Aguarda para ler e avança
-                time.sleep(1.5)
+                # Marca para mostrar o botão continuar
+                st.session_state[f'{self.key}_show_continue'] = True
                 st.rerun()
         
         st.markdown("---")
