@@ -1,0 +1,136 @@
+import streamlit as st
+import json
+import time
+
+class Scenario:
+    def __init__(self, scenario_key):
+        """Carrega cenário do JSON"""
+        self.key = scenario_key
+        self.data = self.load_scenario_data()
+        self.nome = self.data['nome']
+        self.perfil = self.data['perfil']
+        self.contexto = self.data['contexto']
+        self.steps = self.data['steps']
+        
+    @staticmethod
+    @st.cache_data
+    def load_scenarios():
+        """Carrega todos cenários do JSON (com cache)"""
+        with open('data/scenarios.json', 'r', encoding='utf-8') as f:
+            return json.load(f)
+    
+    def load_scenario_data(self):
+        """Carrega dados específicos do cenário"""
+        scenarios = self.load_scenarios()
+        return scenarios[self.key]
+    
+    def init_state(self):
+        """Inicializa session state para este cenário"""
+        if f'{self.key}_step' not in st.session_state:
+            st.session_state[f'{self.key}_step'] = 0
+        if f'{self.key}_score' not in st.session_state:
+            st.session_state[f'{self.key}_score'] = 0
+        if f'{self.key}_history' not in st.session_state:
+            st.session_state[f'{self.key}_history'] = []
+    
+    def reset(self):
+        """Reseta o cenário"""
+        st.session_state[f'{self.key}_step'] = 0
+        st.session_state[f'{self.key}_score'] = 0
+        st.session_state[f'{self.key}_history'] = []
+    
+    def get_current_step(self):
+        """Retorna step atual"""
+        return st.session_state[f'{self.key}_step']
+    
+    def get_score(self):
+        """Retorna pontuação"""
+        return st.session_state[f'{self.key}_score']
+    
+    def get_history(self):
+        """Retorna histórico"""
+        return st.session_state[f'{self.key}_history']
+    
+    def show(self):
+        """Mostra o cenário interativo"""
+        self.init_state()
+        current_step = self.get_current_step()
+        
+        # Cabeçalho
+        st.markdown(f'<div class="big-title">📱 Cenário: {self.nome}</div>', unsafe_allow_html=True)
+        st.markdown(f'**Perfil:** {self.perfil}')
+        
+        # Contexto (só no início)
+        if current_step == 0:
+            st.info(self.contexto)
+            st.markdown("---")
+        
+        # Mostrar pontuação e progresso
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown(f'<div class="score-display">📊 Pontos: {self.get_score()}</div>', unsafe_allow_html=True)
+        with col2:
+            st.markdown(f'<div class="score-display">🎯 Pergunta: {current_step + 1}/{len(self.steps)}</div>', unsafe_allow_html=True)
+        
+        # Barra de progresso
+        progress = (current_step / len(self.steps)) * 100
+        st.progress(progress / 100)
+        
+        st.markdown("---")
+        
+        # Verificar se acabou
+        if current_step >= len(self.steps):
+            return 'result'  # Sinaliza que deve mostrar resultado
+        
+        # Pegar step atual
+        step_data = self.steps[current_step]
+        
+        # Mostrar fala da cliente
+        st.markdown(f'''
+        <div class="cliente-bubble">
+            <strong>💬 {self.nome} diz:</strong><br>
+            "{step_data["cliente_fala"]}"
+        </div>
+        ''', unsafe_allow_html=True)
+        
+        st.markdown("### Como você responde?")
+        
+        # Mostrar opções
+        for idx, opcao in enumerate(step_data['opcoes']):
+            letra = chr(65 + idx)  # A, B, C, D
+            if st.button(f"{letra}) {opcao['texto']}", key=f"opt_{self.key}_{current_step}_{idx}", use_container_width=True):
+                # Registrar escolha PRIMEIRO
+                st.session_state[f'{self.key}_history'].append({
+                    'step': current_step,
+                    'escolha': opcao['texto'],
+                    'pontos': opcao['pontos'],
+                    'feedback': opcao['feedback'],
+                    'resposta': opcao['resposta_cliente']
+                })
+                st.session_state[f'{self.key}_score'] += opcao['pontos']
+                st.session_state[f'{self.key}_step'] += 1
+                
+                # Mostrar feedback imediato
+                if opcao['pontos'] >= 2:
+                    st.success(f"✅ {opcao['feedback']}")
+                    st.info(f"💬 **{self.nome} responde:** {opcao['resposta_cliente']}")
+                elif opcao['pontos'] >= 0:
+                    st.warning(f"⚠️ {opcao['feedback']}")
+                    st.info(f"💬 **{self.nome} responde:** {opcao['resposta_cliente']}")
+                else:
+                    st.error(f"❌ {opcao['feedback']}")
+                    st.info(f"💬 **{self.nome} responde:** {opcao['resposta_cliente']}")
+                
+                # Aguarda para ler e avança
+                time.sleep(1.5)
+                st.rerun()
+        
+        st.markdown("---")
+        
+        # Botão voltar
+        if st.button("⬅️ Voltar para Cenários"):
+            self.reset()
+            st.session_state.page = 'scenarios'
+            st.rerun()
+        
+        return 'running'  # Cenário ainda está rodando
