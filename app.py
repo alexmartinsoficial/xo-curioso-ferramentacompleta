@@ -49,7 +49,7 @@ load_css()
 if 'page' not in st.session_state:
     st.session_state.page = 'home'
 
-# Sistema de login (descomente para ativar)
+# Sistema de login
 # if not require_auth():
 #     show_login()
 #     st.stop()
