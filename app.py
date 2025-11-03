@@ -52,8 +52,8 @@ if 'page' not in st.session_state:
 
 # Sistema de login (ATIVE quando quiser exigir login)
 if not require_auth():
-show_login()
-st.stop()
+    show_login()
+    st.stop()
 
 # Botão de logout no sidebar (quando login estiver ativo)
 # with st.sidebar:
