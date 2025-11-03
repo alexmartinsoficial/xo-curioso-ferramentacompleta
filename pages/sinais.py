@@ -39,7 +39,7 @@ def show_sinais():
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         if st.button("✅ ENTENDI! QUERO TREINAR AGORA", type="primary", use_container_width=True):
-            st.session_state.page = 'scenarios'
+            st.session_state.page = 'dashboard'
             st.rerun()
     
     st.markdown("<br>", unsafe_allow_html=True)
