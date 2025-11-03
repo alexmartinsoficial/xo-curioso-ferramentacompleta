@@ -28,7 +28,7 @@
             "tipo": "warning",
             "feedback": "⚠️ **PODE MELHORAR:** Você tentou avançar mas não qualificou se ela tem orçamento. Pode perder tempo com avaliação gratuita.",
             "resposta_cliente": "Posso ir semana que vem. Mas antes, quanto custa mais ou menos?"
-          }
+          },
         ]
       },
       {
@@ -545,7 +545,7 @@
           "tipo": "danger",
           "feedback": "❌ **ERRO:** Você fez promessa genérica sem nem saber o que ela quer resolver. Isso gera expectativa errada!",
           "resposta_cliente": "Tudo mesmo? Que bom! Então resolve minhas olheiras também, né?"
-        }
+        },
       ]
     },
     {
@@ -571,7 +571,7 @@
           "tipo": "danger",
           "feedback": "❌ **ERRO GRAVE:** Você minimizou a dor dela dizendo que é 'comum na idade'. Isso invalidou o sentimento dela!",
           "resposta_cliente": "Nossa... então é porque estou ficando velha mesmo? Que triste..."
-        }
+        },
       ]
     },
     {
@@ -631,7 +631,7 @@
           "tipo": "danger",
           "feedback": "❌ **ERRO:** Você minimizou o problema dela E fez promessa vaga. Não criou valor nem descobriu a dor real!",
           "resposta_cliente": "Acaba com tudo mesmo? Porque já tentei várias coisas e não resolveu..."
-        }
+        },
       ]
     },
     {
