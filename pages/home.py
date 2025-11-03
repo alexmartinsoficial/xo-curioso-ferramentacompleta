@@ -34,6 +34,9 @@ def show_home():
     ''', unsafe_allow_html=True)
     
     st.markdown("<br>", unsafe_allow_html=True)
+
+    # DEBUG - REMOVER DEPOIS
+    st.write(f"DEBUG: Página atual = {st.session_state.get('page', 'nenhuma')}")
     
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
