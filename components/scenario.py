@@ -13,7 +13,6 @@ class Scenario:
         self.steps = self.data['steps']
         
     @staticmethod
-    @st.cache_data
     def load_scenarios():
         """Carrega todos cenários dos 4 arquivos JSON (com cache)"""
         all_scenarios = {}
