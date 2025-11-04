@@ -144,13 +144,13 @@ elif page.startswith('scenario_'):
     
     if len(parts) == 2:
         stage_key, scenario_key = parts
-        # Por enquanto só temos budget, então usa marcia/paula/carla direto
-        scenario = Scenario(scenario_key)
-        result = scenario.show()
+        full_scenario_key = f"{stage_key}_{scenario_key}"  # ✅ CORRETO
+        scenario = Scenario(full_scenario_key)
         
         if result == 'result':
             st.session_state.page = f'result_{scenario_key}'
             st.rerun()
+            
     elif len(parts) == 1:
         # Compatibilidade com cenários antigos (marcia, paula, carla)
         scenario_key = parts[0]
