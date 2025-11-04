@@ -15,32 +15,13 @@ class Scenario:
     @staticmethod
     @st.cache_data
     def load_scenarios():
-        """Carrega todos cenários dos 4 arquivos JSON (com cache)"""
-        all_scenarios = {}
-        
-        # Lista dos 4 arquivos JSON
-        json_files = ['budget', 'authority', 'need', 'timeline']
-        
-        for file in json_files:
-            try:
-                with open(f'data/scenarios_{file}.json', 'r', encoding='utf-8') as f:
-                    scenarios = json.load(f)
-                    all_scenarios.update(scenarios)
-            except FileNotFoundError:
-                st.error(f"❌ Arquivo scenarios_{file}.json não encontrado!")
-            except json.JSONDecodeError as e:
-                st.error(f"❌ Erro ao ler scenarios_{file}.json: {e}")
-        
-        return all_scenarios
+        """Carrega todos cenários do JSON (com cache)"""
+        with open('data/scenarios.json', 'r', encoding='utf-8') as f:
+            return json.load(f)
     
     def load_scenario_data(self):
         """Carrega dados específicos do cenário"""
         scenarios = self.load_scenarios()
-        
-        if self.key not in scenarios:
-            st.error(f"❌ Cenário '{self.key}' não encontrado!")
-            st.stop()
-            
         return scenarios[self.key]
     
     def init_state(self):
