@@ -7,7 +7,7 @@ def get_completed_stages():
     stages = ['budget', 'authority', 'need', 'timeline']
     
     for stage in stages:
-        # Verifica se completou os 3 cenários da etapa
+        # Verifica se completou os 3 cenários da etapa (usando nomes corretos do scenarios.json)
         marcia_done = st.session_state.get(f'{stage}_marcia_completed', False)
         paula_done = st.session_state.get(f'{stage}_paula_completed', False)
         carla_done = st.session_state.get(f'{stage}_carla_completed', False)
