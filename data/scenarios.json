@@ -257,4 +257,262 @@
          }
       ]
    }
+},
+"authority_marcia": {
+  "nome": "Márcia",
+  "perfil": "🟢 SINAL VERDE",
+  "etapa": "authority",
+  "contexto": "Márcia já confirmou que tem R$ 4.000 de orçamento para harmonização facial. Agora você precisa descobrir se ELA decide sozinha ou se precisa consultar alguém (marido, mãe, amiga...).\n\n**Seu objetivo:** Qualificar o poder de decisão SEM criar objeções desnecessárias.",
+  "steps": [
+    {
+      "cliente_fala": "Adorei a proposta! Mas antes de confirmar, preciso conversar com meu marido.",
+      "opcoes": [
+        {
+          "texto": "Sem problema! Me avisa quando vocês decidirem.",
+          "pontos": -2,
+          "tipo": "danger",
+          "feedback": "❌ **ERRO:** Você aceitou passivamente e perdeu o controle da venda. Ela pode nunca mais voltar.",
+          "resposta_cliente": "Tá bom! Qualquer coisa eu te procuro. (Spoiler: ela não procurou)"
+        },
+        {
+          "texto": "Entendo! E o que especificamente ele precisa saber para vocês decidirem juntos?",
+          "pontos": 3,
+          "tipo": "success",
+          "feedback": "✅ **EXCELENTE!** Você investigou a REAL objeção e se preparou para lidar com ela. Manteve controle da conversa.",
+          "resposta_cliente": "Ah, ele vai querer saber se é seguro e se o resultado fica natural. Ele é meio preocupado com essas coisas."
+        },
+        {
+          "texto": "Mas você que vai ficar bonita, não ele! Decide logo!",
+          "pontos": -3,
+          "tipo": "danger",
+          "feedback": "❌ **PÉSSIMO!** Você desrespeitou a dinâmica do relacionamento dela. Perdeu a cliente na hora.",
+          "resposta_cliente": "Que grosseria! Não vou fazer nada com você. (Bloqueou seu número)"
+        }
+      ]
+    },
+    {
+      "cliente_fala": "Ele quer saber se é seguro e se fica natural. Ele tem medo que eu fique 'artificial'.",
+      "opcoes": [
+        {
+          "texto": "Que tal trazer ele na avaliação? Assim eu explico pessoalmente e ele fica tranquilo.",
+          "pontos": 3,
+          "tipo": "success",
+          "feedback": "✅ **PERFEITO!** Você incluiu o decisor no processo. Transparência gera confiança e fecha vendas.",
+          "resposta_cliente": "Boa ideia! Ele vai gostar de conversar com você. Posso trazer ele semana que vem?"
+        },
+        {
+          "texto": "Pode ficar tranquila, meu trabalho é super natural! Mostra as fotos do Instagram para ele.",
+          "pontos": 1,
+          "tipo": "warning",
+          "feedback": "⚠️ **PODE MELHORAR:** Você deu garantias mas não envolveu o decisor. Ele pode continuar inseguro e bloquear a venda.",
+          "resposta_cliente": "Vou mostrar sim... mas não sei se vai convencer ele só com foto."
+        },
+        {
+          "texto": "Olha, se ele não confia no seu gosto, o problema não sou eu...",
+          "pontos": -3,
+          "tipo": "danger",
+          "feedback": "❌ **TERRÍVEL!** Você colocou ela contra o marido. Relacionamento > Procedimento estético. Perdeu cliente E ganhou inimiga.",
+          "resposta_cliente": "Você está passando dos limites. Não vou fazer nada com você."
+        }
+      ]
+    },
+    {
+      "cliente_fala": "Ele topou vir na avaliação! Mas disse que se for caro demais, vamos ter que repensar.",
+      "opcoes": [
+        {
+          "texto": "Perfeito! Quando vocês podem vir? Vou preparar uma apresentação completa para tranquilizar ele.",
+          "pontos": 3,
+          "tipo": "success",
+          "feedback": "✅ **EXCELENTE!** Você agendou E se preparou para lidar com os dois decisores. Profissionalismo total!",
+          "resposta_cliente": "Podemos ir quinta-feira à tarde. Vou confirmar o horário com ele e te aviso!"
+        },
+        {
+          "texto": "Mas você já disse que tem R$ 4.000... isso vai caber no orçamento de vocês.",
+          "pontos": 0,
+          "tipo": "warning",
+          "feedback": "⚠️ **CUIDADO:** Você está assumindo. Pode ser que ele não saiba do valor ou discorde. Melhor deixar para a reunião.",
+          "resposta_cliente": "É... eu tenho, mas não sei se ele vai achar que vale a pena gastar isso."
+        },
+        {
+          "texto": "Posso fazer um desconto especial para facilitar a decisão de vocês.",
+          "pontos": -2,
+          "tipo": "danger",
+          "feedback": "❌ **ERRO:** Você deu desconto por MEDO de perder a venda. Nunca faça isso antes de apresentar valor!",
+          "resposta_cliente": "Hmm... quanto de desconto? Porque se for pouco, nem adianta..."
+        }
+      ]
+    }
+  ]
+}
+"authority_paula": {
+  "nome": "Paula",
+  "perfil": "🟡 SINAL AMARELO",
+  "etapa": "authority",
+  "contexto": "Paula já confirmou que consegue parcelar o tratamento de acne em até 6x. Agora você precisa descobrir se ELA decide sozinha ou se vai 'consultar' eternamente.\n\n**Seu objetivo:** Identificar quem realmente decide e evitar o ciclo infinito de 'vou pensar'.",
+  "steps": [
+    {
+      "cliente_fala": "Gostei da proposta! Mas vou conversar com minha mãe antes, porque ela entende dessas coisas.",
+      "opcoes": [
+        {
+          "texto": "Claro! Conversa com ela e depois me avisa o que decidiram.",
+          "pontos": -2,
+          "tipo": "danger",
+          "feedback": "❌ **ERRO:** Você deixou a decisão escapar das suas mãos. Paula pode 'sumir' e nunca mais voltar.",
+          "resposta_cliente": "Tá bom! Vou falar com ela e te retorno. (Nunca retornou)"
+        },
+        {
+          "texto": "Entendo! Sua mãe tem alguma preocupação específica sobre tratamentos estéticos?",
+          "pontos": 3,
+          "tipo": "success",
+          "feedback": "✅ **ÓTIMO!** Você investigou qual a real influência da mãe e se preparou para lidar com possíveis objeções.",
+          "resposta_cliente": "Ela sempre acha que tratamento de pele é 'coisa cara e desnecessária'. Mas eu quero muito resolver isso."
+        },
+        {
+          "texto": "Paula, você tem 28 anos. Não precisa pedir permissão para a sua mãe.",
+          "pontos": -3,
+          "tipo": "danger",
+          "feedback": "❌ **PÉSSIMO!** Você ofendeu a relação familiar dela. Independente da idade, respeito é fundamental.",
+          "resposta_cliente": "Que falta de educação! Minha mãe é muito importante para mim. Não quero mais falar com você."
+        }
+      ]
+    },
+    {
+      "cliente_fala": "É que ela sempre diz que tratamento de pele é caro demais e que não resolve nada...",
+      "opcoes": [
+        {
+          "texto": "Que tal ela vir junto na avaliação? Posso explicar o protocolo e mostrar casos reais de sucesso.",
+          "pontos": 2,
+          "tipo": "success",
+          "feedback": "✅ **BOM!** Você tentou incluir, mas poderia ter descoberto primeiro se Paula REALMENTE precisa da aprovação da mãe.",
+          "resposta_cliente": "Acho difícil ela ter tempo... mas posso tentar convencer ela a vir."
+        },
+        {
+          "texto": "Entendo a preocupação dela. Mas me diz uma coisa: no final, quem decide é você ou sua mãe?",
+          "pontos": 3,
+          "tipo": "success",
+          "feedback": "✅ **EXCELENTE!** Você foi direto ao ponto sem ofender. Descobriu quem REALMENTE tem autoridade na decisão.",
+          "resposta_cliente": "Olha... tecnicamente sou eu. Mas ela sempre opina bastante e eu acabo seguindo o que ela diz..."
+        },
+        {
+          "texto": "Posso fazer um desconto para você mostrar para ela que vale a pena!",
+          "pontos": -2,
+          "tipo": "danger",
+          "feedback": "❌ **ERRO:** Você deu desconto para tentar 'convencer' um decisor que nem conhece. Desvalorização total!",
+          "resposta_cliente": "Ah legal! Quanto de desconto? Mas não sei se vai convencer ela mesmo assim..."
+        }
+      ]
+    },
+    {
+      "cliente_fala": "Tecnicamente eu decido, mas sempre consulto ela... ela já me ajudou muito com essas coisas.",
+      "opcoes": [
+        {
+          "texto": "Entendo perfeitamente. Então vamos fazer assim: te mando um material completo sobre o tratamento para você estudar e mostrar para ela. Aí vocês conversam com informação de qualidade. Combinado?",
+          "pontos": 3,
+          "tipo": "success",
+          "feedback": "✅ **PERFEITO!** Você facilitou a decisão sem pressionar, deu autonomia e manteve controle do processo. Excelente!",
+          "resposta_cliente": "Ótimo! Assim consigo explicar direitinho para ela. Quando você me manda o material?"
+        },
+        {
+          "texto": "Paula, você precisa decidir por você mesma. Você que sofre com a acne, não sua mãe.",
+          "pontos": -1,
+          "tipo": "warning",
+          "feedback": "⚠️ **CUIDADO:** Você está certo, mas foi muito direto. Cliente Amarelo precisa de suporte, não confronto.",
+          "resposta_cliente": "Eu sei... mas é difícil ir contra a opinião dela. Vou pensar melhor sobre isso."
+        },
+        {
+          "texto": "Então vamos marcar logo! Depois você mostra o resultado para ela e pronto.",
+          "pontos": -2,
+          "tipo": "danger",
+          "feedback": "❌ **ERRO:** Você tentou 'pular' o decisor. Isso pode gerar conflito familiar e cancelamento depois.",
+          "resposta_cliente": "Não sei... acho que preciso conversar com ela antes. Senão ela vai ficar brava comigo."
+        }
+      ]
+    }
+  ]
+}
+"authority_carla": {
+  "nome": "Carla",
+  "perfil": "🔴 SINAL VERMELHO",
+  "etapa": "authority",
+  "contexto": "Carla está 'pesquisando' botox mas ainda não demonstrou urgência real. Agora ela menciona que 'precisa consultar' outras pessoas. Você precisa identificar se isso é objeção real ou desculpa para não decidir.\n\n**Seu objetivo:** Descobrir rapidamente se vale investir tempo ou se é melhor desqualificar educadamente.",
+  "steps": [
+    {
+      "cliente_fala": "Gostei das informações! Mas vou conversar com minhas amigas que já fizeram antes de decidir.",
+      "opcoes": [
+        {
+          "texto": "Claro! Conversa com elas e me avisa o que acharam.",
+          "pontos": -2,
+          "tipo": "danger",
+          "feedback": "❌ **ERRO:** Você perdeu o controle total. Carla vai 'consultar' 50 pessoas e nunca mais voltar.",
+          "resposta_cliente": "Tá bom! Qualquer coisa eu te procuro. (Spoiler: ela não procurou)"
+        },
+        {
+          "texto": "Entendo! Que tipo de informação você espera que elas te passem?",
+          "pontos": 3,
+          "tipo": "success",
+          "feedback": "✅ **ÓTIMO!** Você investigou se é objeção real ou desculpa. Agora sabe como qualificar melhor.",
+          "resposta_cliente": "Ah, quero saber se dói muito, quanto tempo dura, essas coisas... Elas já fizeram com outros profissionais."
+        },
+        {
+          "texto": "Carla, cada caso é um caso. O que funcionou para suas amigas pode não ser igual para você.",
+          "pontos": 0,
+          "tipo": "warning",
+          "feedback": "⚠️ **NEUTRO:** Você está tecnicamente certo, mas não descobriu se ela tem REAL intenção de fazer ou só quer 'validação social'.",
+          "resposta_cliente": "É verdade... mas mesmo assim quero ouvir a experiência delas antes."
+        }
+      ]
+    },
+    {
+      "cliente_fala": "Quero saber se dói, quanto tempo dura, essas coisas... Elas fizeram com outros profissionais.",
+      "opcoes": [
+        {
+          "texto": "Posso responder tudo isso agora! Dor é mínima, dura 4-6 meses. Quer mais alguma informação?",
+          "pontos": 1,
+          "tipo": "warning",
+          "feedback": "⚠️ **PODE MELHORAR:** Você respondeu mas não qualificou se ela VAI REALMENTE FAZER ou só está coletando informações eternamente.",
+          "resposta_cliente": "Ah que bom! Vou anotar isso e conversar com elas mesmo assim. Obrigada!"
+        },
+        {
+          "texto": "Entendo. Mas me diz: depois de conversar com elas, você pretende agendar em quanto tempo?",
+          "pontos": 3,
+          "tipo": "success",
+          "feedback": "✅ **EXCELENTE!** Você qualificou a TIMELINE dela. Agora vai descobrir se é Vermelha de verdade ou pode virar Amarela.",
+          "resposta_cliente": "Olha... não sei. Depende muito do que elas falarem. Talvez só ano que vem mesmo."
+        },
+        {
+          "texto": "Se você fechar hoje, faço um preço especial! Assim não precisa ficar consultando ninguém.",
+          "pontos": -3,
+          "tipo": "danger",
+          "feedback": "❌ **PÉSSIMO!** Você deu desconto por desespero em cliente VERMELHO. Desvalorizou totalmente seu trabalho!",
+          "resposta_cliente": "Hmm... mesmo com desconto, acho que vou pesquisar mais. Obrigada!"
+        }
+      ]
+    },
+    {
+      "cliente_fala": "Talvez só ano que vem. Quero ter certeza antes de fazer.",
+      "opcoes": [
+        {
+          "texto": "Sem problema, Carla! Quando estiver pronta, é só me procurar. Boa sorte na pesquisa!",
+          "pontos": 3,
+          "tipo": "success",
+          "feedback": "✅ **PERFEITO!** Você identificou Sinal Vermelho e desqualificou educadamente. Liberou seu tempo para clientes reais!",
+          "resposta_cliente": "Obrigada! Se eu decidir, entro em contato. (Pelo menos foi honesto e não perdeu tempo)"
+        },
+        {
+          "texto": "Carla, ano que vem é muito tempo! Deixa eu te explicar por que você deveria fazer agora...",
+          "pontos": -2,
+          "tipo": "danger",
+          "feedback": "❌ **ERRO:** Você está insistindo em quem NÃO TEM URGÊNCIA. Cliente Vermelho não vira Verde com pressão.",
+          "resposta_cliente": "Olha, não quero pressão. Vou pensar com calma e te aviso. (Bloqueou)"
+        },
+        {
+          "texto": "Mas posso separar uma vaga para você! Assim garante o procedimento quando decidir.",
+          "pontos": -3,
+          "tipo": "danger",
+          "feedback": "❌ **TERRÍVEL!** Você está 'reservando vaga' para quem vai decidir só ANO QUE VEM? Perdeu noção do BANT!",
+          "resposta_cliente": "Ah legal! Mas não garanto nada, viu? Só se eu realmente decidir... (Nunca decidiu)"
+        }
+      ]
+    }
+  ]
 }
