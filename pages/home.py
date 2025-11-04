@@ -34,9 +34,6 @@ def show_home():
     ''', unsafe_allow_html=True)
     
     st.markdown("<br>", unsafe_allow_html=True)
-
-    # DEBUG - REMOVER DEPOIS
-    st.write(f"DEBUG: Página atual = {st.session_state.get('page', 'nenhuma')}")
     
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
@@ -46,6 +43,7 @@ def show_home():
             st.session_state.page = 'sinais'
             st.rerun()
     
+    # FOOTER DENTRO DA FUNÇÃO! ✅
     st.markdown('''
     <div class="footer-info">
         ⚡ Gratuito • 5 minutos • Resultado imediato
