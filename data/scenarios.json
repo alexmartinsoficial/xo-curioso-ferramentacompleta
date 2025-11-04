@@ -164,7 +164,7 @@
             "texto": "Trabalho com parcelamento, geralmente entre 3x e 6x. As parcelas ficam entre R$ 450 e R$ 950. Na avaliação vejo seu caso e monto o melhor plano. Essa faixa cabe para você?",
             "pontos": 3,
             "tipo": "success",
-            "feedback": "✅ **PERFEITO!** Você deu faixa clara (qualificou), não deu exatidão (precisa ir na avaliação), e mencionou vantagem. Excelente!",
+            "feedback": "✅ **PERFEITO!** Você deu faixa clara (qualificou), não deu exatidão (precisa ir na avaliação), e facilitou. Excelente!",
             "resposta_cliente": "Acho que sim! Vou ver direitinho mas parece que dá. Quando posso ir fazer a avaliação?"
           }
         ]
@@ -252,6 +252,780 @@
             "tipo": "danger",
             "feedback": "❌ **DESESPERO!** Você está oferecendo desconto E indicação para alguém que claramente não vai fechar. Parou de se valorizar.",
             "resposta_cliente": "Ah que legal! Vou ver com minhas amigas e a gente vê... (nunca mais apareceu)"
+          }
+        ]
+      }
+    ]
+  },
+  "authority_marcia": {
+    "nome": "Márcia",
+    "perfil": "🟢 SINAL VERDE",
+    "etapa": "authority",
+    "contexto": "Márcia já confirmou que tem R$ 4.000 de orçamento para harmonização facial. Agora você precisa descobrir se ELA decide sozinha ou se precisa consultar alguém (marido, mãe, amiga...).\n\n**Seu objetivo:** Qualificar o poder de decisão SEM criar objeções desnecessárias.",
+    "steps": [
+      {
+        "cliente_fala": "Adorei a proposta! Mas antes de confirmar, preciso conversar com meu marido.",
+        "opcoes": [
+          {
+            "texto": "Sem problema! Me avisa quando vocês decidirem.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você aceitou passivamente e perdeu o controle da venda. Ela pode nunca mais voltar.",
+            "resposta_cliente": "Tá bom! Qualquer coisa eu te procuro. (Spoiler: ela não procurou)"
+          },
+          {
+            "texto": "Entendo! E o que especificamente ele precisa saber para vocês decidirem juntos?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você investigou a REAL objeção e se preparou para lidar com ela. Manteve controle da conversa.",
+            "resposta_cliente": "Ah, ele vai querer saber se é seguro e se o resultado fica natural. Ele é meio preocupado com essas coisas."
+          },
+          {
+            "texto": "Mas você que vai ficar bonita, não ele! Decide logo!",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **PÉSSIMO!** Você desrespeitou a dinâmica do relacionamento dela. Perdeu a cliente na hora.",
+            "resposta_cliente": "Que grosseria! Não vou fazer nada com você. (Bloqueou seu número)"
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Ele quer saber se é seguro e se fica natural. Ele tem medo que eu fique 'artificial'.",
+        "opcoes": [
+          {
+            "texto": "Que tal trazer ele na avaliação? Assim eu explico pessoalmente e ele fica tranquilo.",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **PERFEITO!** Você incluiu o decisor no processo. Transparência gera confiança e fecha vendas.",
+            "resposta_cliente": "Boa ideia! Ele vai gostar de conversar com você. Posso trazer ele semana que vem?"
+          },
+          {
+            "texto": "Pode ficar tranquila, meu trabalho é super natural! Mostra as fotos do Instagram para ele.",
+            "pontos": 1,
+            "tipo": "warning",
+            "feedback": "⚠️ **PODE MELHORAR:** Você deu garantias mas não envolveu o decisor. Ele pode continuar inseguro e bloquear a venda.",
+            "resposta_cliente": "Vou mostrar sim... mas não sei se vai convencer ele só com foto."
+          },
+          {
+            "texto": "Olha, se ele não confia no seu gosto, o problema não sou eu...",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **TERRÍVEL!** Você colocou ela contra o marido. Relacionamento > Procedimento estético. Perdeu cliente E ganhou inimiga.",
+            "resposta_cliente": "Você está passando dos limites. Não vou fazer nada com você."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Ele topou vir na avaliação! Mas disse que se for caro demais, vamos ter que repensar.",
+        "opcoes": [
+          {
+            "texto": "Perfeito! Quando vocês podem vir? Vou preparar uma apresentação completa para tranquilizar ele.",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você agendou E se preparou para lidar com os dois decisores. Profissionalismo total!",
+            "resposta_cliente": "Podemos ir quinta-feira à tarde. Vou confirmar o horário com ele e te aviso!"
+          },
+          {
+            "texto": "Mas você já disse que tem R$ 4.000... isso vai caber no orçamento de vocês.",
+            "pontos": 0,
+            "tipo": "warning",
+            "feedback": "⚠️ **CUIDADO:** Você está assumindo. Pode ser que ele não saiba do valor ou discorde. Melhor deixar para a reunião.",
+            "resposta_cliente": "É... eu tenho, mas não sei se ele vai achar que vale a pena gastar isso."
+          },
+          {
+            "texto": "Posso fazer um desconto especial para facilitar a decisão de vocês.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você deu desconto por MEDO de perder a venda. Nunca faça isso antes de apresentar valor!",
+            "resposta_cliente": "Hmm... quanto de desconto? Porque se for pouco, nem adianta..."
+          }
+        ]
+      }
+    ]
+  },
+  "authority_paula": {
+    "nome": "Paula",
+    "perfil": "🟡 SINAL AMARELO",
+    "etapa": "authority",
+    "contexto": "Paula já confirmou que consegue parcelar o tratamento de acne em até 6x. Agora você precisa descobrir se ELA decide sozinha ou se vai 'consultar' eternamente.\n\n**Seu objetivo:** Identificar quem realmente decide e evitar o ciclo infinito de 'vou pensar'.",
+    "steps": [
+      {
+        "cliente_fala": "Gostei da proposta! Mas vou conversar com minha mãe antes, porque ela entende dessas coisas.",
+        "opcoes": [
+          {
+            "texto": "Claro! Conversa com ela e depois me avisa o que decidiram.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você deixou a decisão escapar das suas mãos. Paula pode 'sumir' e nunca mais voltar.",
+            "resposta_cliente": "Tá bom! Vou falar com ela e te retorno. (Nunca retornou)"
+          },
+          {
+            "texto": "Entendo! Sua mãe tem alguma preocupação específica sobre tratamentos estéticos?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **ÓTIMO!** Você investigou qual a real influência da mãe e se preparou para lidar com possíveis objeções.",
+            "resposta_cliente": "Ela sempre acha que tratamento de pele é 'coisa cara e desnecessária'. Mas eu quero muito resolver isso."
+          },
+          {
+            "texto": "Paula, você tem 28 anos. Não precisa pedir permissão para a sua mãe.",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **PÉSSIMO!** Você ofendeu a relação familiar dela. Independente da idade, respeito é fundamental.",
+            "resposta_cliente": "Que falta de educação! Minha mãe é muito importante para mim. Não quero mais falar com você."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "É que ela sempre diz que tratamento de pele é caro demais e que não resolve nada...",
+        "opcoes": [
+          {
+            "texto": "Que tal ela vir junto na avaliação? Posso explicar o protocolo e mostrar casos reais de sucesso.",
+            "pontos": 2,
+            "tipo": "success",
+            "feedback": "✅ **BOM!** Você tentou incluir, mas poderia ter descoberto primeiro se Paula REALMENTE precisa da aprovação da mãe.",
+            "resposta_cliente": "Acho difícil ela ter tempo... mas posso tentar convencer ela a vir."
+          },
+          {
+            "texto": "Entendo a preocupação dela. Mas me diz uma coisa: no final, quem decide é você ou sua mãe?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você foi direto ao ponto sem ofender. Descobriu quem REALMENTE tem autoridade na decisão.",
+            "resposta_cliente": "Olha... tecnicamente sou eu. Mas ela sempre opina bastante e eu acabo seguindo o que ela diz..."
+          },
+          {
+            "texto": "Posso fazer um desconto para você mostrar para ela que vale a pena!",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você deu desconto para tentar 'convencer' um decisor que nem conhece. Desvalorização total!",
+            "resposta_cliente": "Ah legal! Quanto de desconto? Mas não sei se vai convencer ela mesmo assim..."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Tecnicamente eu decido, mas sempre consulto ela... ela já me ajudou muito com essas coisas.",
+        "opcoes": [
+          {
+            "texto": "Entendo perfeitamente. Então vamos fazer assim: te mando um material completo sobre o tratamento para você estudar e mostrar para ela. Aí vocês conversam com informação de qualidade. Combinado?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **PERFEITO!** Você facilitou a decisão sem pressionar, deu autonomia e manteve controle do processo. Excelente!",
+            "resposta_cliente": "Ótimo! Assim consigo explicar direitinho para ela. Quando você me manda o material?"
+          },
+          {
+            "texto": "Paula, você precisa decidir por você mesma. Você que sofre com a acne, não sua mãe.",
+            "pontos": -1,
+            "tipo": "warning",
+            "feedback": "⚠️ **CUIDADO:** Você está certo, mas foi muito direto. Cliente Amarelo precisa de suporte, não confronto.",
+            "resposta_cliente": "Eu sei... mas é difícil ir contra a opinião dela. Vou pensar melhor sobre isso."
+          },
+          {
+            "texto": "Então vamos marcar logo! Depois você mostra o resultado para ela e pronto.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você tentou 'pular' o decisor. Isso pode gerar conflito familiar e cancelamento depois.",
+            "resposta_cliente": "Não sei... acho que preciso conversar com ela antes. Senão ela vai ficar brava comigo."
+          }
+        ]
+      }
+    ]
+  },
+  "authority_carla": {
+    "nome": "Carla",
+    "perfil": "🔴 SINAL VERMELHO",
+    "etapa": "authority",
+    "contexto": "Carla está 'pesquisando' botox mas ainda não demonstrou urgência real. Agora ela menciona que 'precisa consultar' outras pessoas. Você precisa identificar se isso é objeção real ou desculpa para não decidir.\n\n**Seu objetivo:** Descobrir rapidamente se vale investir tempo ou se é melhor desqualificar educadamente.",
+    "steps": [
+      {
+        "cliente_fala": "Gostei das informações! Mas vou conversar com minhas amigas que já fizeram antes de decidir.",
+        "opcoes": [
+          {
+            "texto": "Claro! Conversa com elas e me avisa o que acharam.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você perdeu o controle total. Carla vai 'consultar' 50 pessoas e nunca mais voltar.",
+            "resposta_cliente": "Tá bom! Qualquer coisa eu te procuro. (Spoiler: ela não procurou)"
+          },
+          {
+            "texto": "Entendo! Que tipo de informação você espera que elas te passem?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **ÓTIMO!** Você investigou se é objeção real ou desculpa. Agora sabe como qualificar melhor.",
+            "resposta_cliente": "Ah, quero saber se dói muito, quanto tempo dura, essas coisas... Elas já fizeram com outros profissionais."
+          },
+          {
+            "texto": "Carla, cada caso é um caso. O que funcionou para suas amigas pode não ser igual para você.",
+            "pontos": 0,
+            "tipo": "warning",
+            "feedback": "⚠️ **NEUTRO:** Você está tecnicamente certo, mas não descobriu se ela tem REAL intenção de fazer ou só quer 'validação social'.",
+            "resposta_cliente": "É verdade... mas mesmo assim quero ouvir a experiência delas antes."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Quero saber se dói, quanto tempo dura, essas coisas... Elas fizeram com outros profissionais.",
+        "opcoes": [
+          {
+            "texto": "Posso responder tudo isso agora! Dor é mínima, dura 4-6 meses. Quer mais alguma informação?",
+            "pontos": 1,
+            "tipo": "warning",
+            "feedback": "⚠️ **PODE MELHORAR:** Você respondeu mas não qualificou se ela VAI REALMENTE FAZER ou só está coletando informações eternamente.",
+            "resposta_cliente": "Ah que bom! Vou anotar isso e conversar com elas mesmo assim. Obrigada!"
+          },
+          {
+            "texto": "Entendo. Mas me diz: depois de conversar com elas, você pretende agendar em quanto tempo?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você qualificou a TIMELINE dela. Agora vai descobrir se é Vermelha de verdade ou pode virar Amarela.",
+            "resposta_cliente": "Olha... não sei. Depende muito do que elas falarem. Talvez só ano que vem mesmo."
+          },
+          {
+            "texto": "Se você fechar hoje, faço um preço especial! Assim não precisa ficar consultando ninguém.",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **PÉSSIMO!** Você deu desconto por desespero em cliente VERMELHO. Desvalorizou totalmente seu trabalho!",
+            "resposta_cliente": "Hmm... mesmo com desconto, acho que vou pesquisar mais. Obrigada!"
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Talvez só ano que vem. Quero ter certeza antes de fazer.",
+        "opcoes": [
+          {
+            "texto": "Sem problema, Carla! Quando estiver pronta, é só me procurar. Boa sorte na pesquisa!",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **PERFEITO!** Você identificou Sinal Vermelho e desqualificou educadamente. Liberou seu tempo para clientes reais!",
+            "resposta_cliente": "Obrigada! Se eu decidir, entro em contato. (Pelo menos foi honesto e não perdeu tempo)"
+          },
+          {
+            "texto": "Carla, ano que vem é muito tempo! Deixa eu te explicar por que você deveria fazer agora...",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você está insistindo em quem NÃO TEM URGÊNCIA. Cliente Vermelho não vira Verde com pressão.",
+            "resposta_cliente": "Olha, não quero pressão. Vou pensar com calma e te aviso. (Bloqueou)"
+          },
+          {
+            "texto": "Mas posso separar uma vaga para você! Assim garante o procedimento quando decidir.",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **TERRÍVEL!** Você está 'reservando vaga' para quem vai decidir só ANO QUE VEM? Perdeu noção do BANT!",
+            "resposta_cliente": "Ah legal! Mas não garanto nada, viu? Só se eu realmente decidir... (Nunca decidiu)"
+          }
+        ]
+      }
+    ]
+  },
+  "need_marcia": {
+    "nome": "Márcia",
+    "perfil": "🟢 SINAL VERDE",
+    "etapa": "need",
+    "contexto": "Márcia já confirmou que tem orçamento (R$ 4.000) e que decide junto com o marido (que topou vir na avaliação). Agora você precisa identificar a DOR REAL dela para criar valor e justificar o investimento.\n\n**Seu objetivo:** Descobrir a necessidade verdadeira e conectá-la emocionalmente ao resultado.",
+    "steps": [
+      {
+        "cliente_fala": "Então, eu quero fazer harmonização facial porque acho que vai me deixar mais bonita.",
+        "opcoes": [
+          {
+            "texto": "Com certeza vai! Vou fazer um trabalho lindo em você.",
+            "pontos": -1,
+            "tipo": "warning",
+            "feedback": "⚠️ **SUPERFICIAL:** Você concordou mas não descobriu a DOR REAL. 'Ficar bonita' é vago demais. Precisa aprofundar!",
+            "resposta_cliente": "Legal! Então quando a gente agenda?"
+          },
+          {
+            "texto": "Entendo! Mas me conta: o que especificamente te incomoda quando você se olha no espelho?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você foi direto na DOR REAL. Agora vai descobrir a necessidade emocional dela.",
+            "resposta_cliente": "Olha... eu me acho com o rosto muito caído. E tenho umas rugas ao redor da boca que me incomodam muito."
+          },
+          {
+            "texto": "Harmonização resolve tudo! Você vai ficar incrível.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você fez promessa genérica sem nem saber o que ela quer resolver. Isso gera expectativa errada!",
+            "resposta_cliente": "Tudo mesmo? Que bom! Então resolve minhas olheiras também, né?"
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Meu rosto está muito caído e tenho rugas ao redor da boca que me incomodam muito.",
+        "opcoes": [
+          {
+            "texto": "Consigo resolver isso! Vou usar preenchimento e toxina botulínica.",
+            "pontos": 1,
+            "tipo": "warning",
+            "feedback": "⚠️ **PODE MELHORAR:** Você já pulou para a solução técnica sem explorar o IMPACTO EMOCIONAL. Falta criar conexão!",
+            "resposta_cliente": "Ah tá! E quanto tempo dura o resultado?"
+          },
+          {
+            "texto": "Entendo. E isso te incomoda faz tempo? Como você se sente quando percebe isso no espelho?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **PERFEITO!** Você aprofundou na DOR EMOCIONAL. Agora vai descobrir o verdadeiro impacto na vida dela.",
+            "resposta_cliente": "Faz uns 2 anos... Eu me sinto mais velha do que sou. Tenho 35 mas pareço ter 45. Isso mexe muito com minha autoestima."
+          },
+          {
+            "texto": "Isso é comum na sua idade. Mas fica tranquila, a gente resolve!",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO GRAVE:** Você minimizou a dor dela dizendo que é 'comum na idade'. Isso invalidou o sentimento dela!",
+            "resposta_cliente": "Nossa... então é porque estou ficando velha mesmo? Que triste..."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Tenho 35 mas pareço ter 45. Isso mexe muito com minha autoestima, principalmente no trabalho.",
+        "opcoes": [
+          {
+            "texto": "Imagino como isso deve ser difícil. Vou montar um protocolo específico para recuperar a firmeza e suavizar essas linhas. O resultado vai ser natural e você vai se sentir renovada. É exatamente isso que você está buscando?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você validou a dor, conectou com a solução E confirmou se entendeu a necessidade. Perfeito!",
+            "resposta_cliente": "Exatamente isso! Quero me sentir bem comigo mesma novamente. Vamos agendar então!"
+          },
+          {
+            "texto": "Você vai ficar com cara de 25 anos! Meu trabalho é milagroso.",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **PÉSSIMO!** Você criou expectativa IRREAL e não conectou com a verdadeira necessidade dela (autoestima, não 'cara de 25').",
+            "resposta_cliente": "Sério? Nossa, espero que seja verdade mesmo... Mas não vai ficar artificial, né?"
+          },
+          {
+            "texto": "Entendo. Vou fazer preenchimento no sulco nasogeniano e toxina na testa. Fica ótimo!",
+            "pontos": 0,
+            "tipo": "warning",
+            "feedback": "⚠️ **TÉCNICO DEMAIS:** Você foi direto para procedimentos sem CONECTAR emocionalmente. Perdeu chance de criar valor!",
+            "resposta_cliente": "Tá... não entendi nada desses nomes. Mas tudo bem, confio em você."
+          }
+        ]
+      }
+    ]
+  },
+  "need_paula": {
+    "nome": "Paula",
+    "perfil": "🟡 SINAL AMARELO",
+    "etapa": "need",
+    "contexto": "Paula já confirmou que consegue parcelar o tratamento e que tecnicamente ela decide (mas consulta a mãe). Agora você precisa identificar se a DOR dela é real ou se é só 'curiosidade estética'.\n\n**Seu objetivo:** Diferenciar necessidade real de 'seria legal fazer' e criar urgência baseada na dor.",
+    "steps": [
+      {
+        "cliente_fala": "Queria fazer um tratamento para acne porque tenho algumas espinhas que aparecem de vez em quando.",
+        "opcoes": [
+          {
+            "texto": "Entendo! Posso montar um protocolo completo de tratamento para você.",
+            "pontos": -1,
+            "tipo": "warning",
+            "feedback": "⚠️ **CUIDADO:** Você já ofereceu solução sem investigar a GRAVIDADE do problema. 'Algumas espinhas' pode não justificar R$ 2.800!",
+            "resposta_cliente": "Legal! Mas é que não são tantas assim... só quando vem a TPM mesmo."
+          },
+          {
+            "texto": "Hmm, entendi. Me conta: isso realmente te incomoda no dia a dia ou é algo que você quer 'melhorar' mas não atrapalha muito?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você qualificou a INTENSIDADE da dor. Agora vai descobrir se é necessidade real ou desejo superficial.",
+            "resposta_cliente": "Olha, para ser sincera... me incomoda bastante. Tenho vergonha de sair sem maquiagem e já faltei em alguns eventos por causa disso."
+          },
+          {
+            "texto": "Espinhas são fáceis de resolver! Vou te passar um tratamento que acaba com tudo.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você minimizou o problema dela E fez promessa vaga. Não criou valor nem descobriu a dor real!",
+            "resposta_cliente": "Acaba com tudo mesmo? Porque já tentei várias coisas e não resolveu..."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Me incomoda bastante. Tenho vergonha de sair sem maquiagem e já faltei em eventos por causa disso.",
+        "opcoes": [
+          {
+            "texto": "Entendo perfeitamente. E faz quanto tempo que você convive com isso? Já tentou algum tratamento profissional antes?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **ÓTIMO!** Você aprofundou na HISTÓRIA da dor e investigou tentativas anteriores. Isso cria valor para sua solução!",
+            "resposta_cliente": "Faz uns 3 anos já. Já fui em dermatologista, já tentei vários produtos... nada resolve de verdade."
+          },
+          {
+            "texto": "Imagino como deve ser ruim. Vou montar um protocolo específico para você resolver isso de vez!",
+            "pontos": 1,
+            "tipo": "warning",
+            "feedback": "⚠️ **PODE MELHORAR:** Você validou a dor mas pulou direto para solução. Perdeu chance de criar mais urgência!",
+            "resposta_cliente": "Que bom! Quando posso começar?"
+          },
+          {
+            "texto": "Nossa, mas não precisa ter vergonha! Todo mundo tem espinha às vezes.",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **PÉSSIMO!** Você INVALIDOU a dor emocional dela. Cliente vai se sentir incompreendida e não vai fechar!",
+            "resposta_cliente": "É fácil falar... você não tem que conviver com isso todo dia. Acho que não é o profissional certo para mim."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Faz 3 anos. Já tentei dermatologista e vários produtos mas nada resolve de verdade.",
+        "opcoes": [
+          {
+            "texto": "Entendo sua frustração. O que você fez antes provavelmente tratava só o sintoma. Meu protocolo vai na causa raiz. Mas me diz: se você pudesse acordar amanhã com a pele que você sempre quis, como seria?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **PERFEITO!** Você diferenciou sua solução, validou tentativas anteriores E criou visão de resultado. Excelente vendedor!",
+            "resposta_cliente": "Nossa... seria incrível! Poder sair sem maquiagem, me sentir confiante em fotos... Dá para alcançar isso de verdade?"
+          },
+          {
+            "texto": "Então você está no lugar certo! Meu tratamento é diferente de tudo que você já fez.",
+            "pontos": 0,
+            "tipo": "warning",
+            "feedback": "⚠️ **GENÉRICO:** Você prometeu ser diferente mas não explicou COMO nem POR QUÊ. Cliente amarela precisa de mais fundamento!",
+            "resposta_cliente": "Tá... mas como é diferente? Porque eu já ouvi isso antes..."
+          },
+          {
+            "texto": "Ah, dermatologista não resolve mesmo. Eles só passam pomada.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO GRAVE:** Você desrespeitou outro profissional para se promover. Isso é antiético e gera desconfiança!",
+            "resposta_cliente": "Hmm... não sei se gostei desse comentário. Minha dermatologista é ótima, só não resolveu esse problema específico."
+          }
+        ]
+      }
+    ]
+  },
+  "need_carla": {
+    "nome": "Carla",
+    "perfil": "🔴 SINAL VERMELHO",
+    "etapa": "need",
+    "contexto": "Carla está 'pesquisando' botox mas ainda não demonstrou orçamento nem urgência. Agora você precisa identificar se ela tem uma DOR REAL ou se está apenas 'curiosa' sobre procedimentos estéticos.\n\n**Seu objetivo:** Descobrir rapidamente se existe necessidade genuína ou se é melhor desqualificar para não perder tempo.",
+    "steps": [
+      {
+        "cliente_fala": "Vi que você faz botox. Eu estava pensando em fazer alguma coisa no rosto, sabe?",
+        "opcoes": [
+          {
+            "texto": "Legal! Botox é ótimo. Você quer tratar qual região especificamente?",
+            "pontos": 0,
+            "tipo": "warning",
+            "feedback": "⚠️ **NEUTRO:** Você perguntou sobre a região mas não investigou se existe DOR REAL ou só curiosidade. Cliente Vermelho precisa de qualificação rápida!",
+            "resposta_cliente": "Ah, não sei... talvez a testa? Ou ao redor dos olhos? Ainda estou pesquisando."
+          },
+          {
+            "texto": "Entendi. Me conta: o que te motivou a pesquisar sobre isso agora?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **ÓTIMO!** Você foi direto investigar a MOTIVAÇÃO. Agora vai descobrir se é necessidade real ou só 'seria legal fazer'.",
+            "resposta_cliente": "Ah, vi umas amigas fazendo e achei interessante. Mas não tenho nada que me incomoda muito não..."
+          },
+          {
+            "texto": "Posso fazer uma avaliação gratuita para ver o que você precisa!",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você ofereceu avaliação para quem nem sabe o que quer! Cliente Vermelho sem dor clara = turismo de consultório.",
+            "resposta_cliente": "Ah que legal! Mas não sei se tenho tempo agora... vou ver minha agenda."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Vi amigas fazendo e achei interessante. Mas não tenho nada que me incomoda muito não...",
+        "opcoes": [
+          {
+            "texto": "Ah sim. Então você está mais na fase de 'conhecer' do que realmente precisando resolver algo específico, é isso?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você identificou que NÃO HÁ DOR REAL e está qualificando honestamente. Agora pode desqualificar sem culpa!",
+            "resposta_cliente": "É... exatamente isso! Só queria ter uma ideia de como funciona e quanto custa."
+          },
+          {
+            "texto": "Mas todo mundo tem algo que pode melhorar! Deixa eu te mostrar o que dá para fazer em você.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você está tentando CRIAR necessidade onde não existe. Isso é antiético e desperdiça seu tempo!",
+            "resposta_cliente": "Sei lá... acho que não preciso de nada agora não. Só estava curiosa mesmo."
+          },
+          {
+            "texto": "Entendo! Olha, vou te passar alguns materiais educativos sobre botox. Se no futuro você sentir que realmente precisa, é só me procurar. Combinado?",
+            "pontos": 2,
+            "tipo": "success",
+            "feedback": "✅ **BOM!** Você identificou falta de necessidade e começou a desqualificar educadamente. Mas podia ter sido mais direto.",
+            "resposta_cliente": "Perfeito! Obrigada pelas informações. Se eu decidir fazer, te procuro."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "É isso mesmo! Só queria ter uma ideia de como funciona e quanto custa. Não tenho pressa.",
+        "opcoes": [
+          {
+            "texto": "Perfeito, Carla! Então te mando alguns materiais sobre botox por WhatsApp. Quando você sentir que realmente precisa tratar algo específico, aí sim vale a pena a gente conversar. Por enquanto, aproveita para estudar! Qualquer dúvida, estou à disposição.",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **PERFEITO!** Você desqualificou com classe, sem desperdiçar tempo, e deixou a porta aberta caso ela vire Verde no futuro. Profissional!",
+            "resposta_cliente": "Obrigada pela honestidade! Vou estudar o material e se realmente precisar, te procuro. Adorei a transparência!"
+          },
+          {
+            "texto": "Mas posso fazer um preço especial se você decidir hoje! Assim você aproveita a oportunidade.",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **PÉSSIMO!** Ela disse claramente que NÃO TEM NECESSIDADE e você ofereceu desconto? Desespero total e desvalorização!",
+            "resposta_cliente": "Não, obrigada. Não vou fazer algo que não preciso só porque está com desconto."
+          },
+          {
+            "texto": "Ah, mas todo mundo deveria fazer botox preventivo! Deixa eu te explicar por que você deveria começar agora...",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você está FORÇANDO necessidade. Cliente sem dor + pressão de vendas = reputação destruída e tempo perdido!",
+            "resposta_cliente": "Olha, não gostei dessa insistência. Acho que vou procurar outro profissional quando decidir fazer."
+          }
+        ]
+      }
+    ]
+  },
+  "timeline_marcia": {
+    "nome": "Márcia",
+    "perfil": "🟢 SINAL VERDE",
+    "etapa": "timeline",
+    "contexto": "Márcia já confirmou que tem orçamento (R$ 4.000), decide junto com o marido (que topou vir), e tem uma dor real (autoestima no trabalho + casamento em 6 semanas). Agora você precisa confirmar a URGÊNCIA e fechar a venda.\n\n**Seu objetivo:** Transformar urgência emocional em agendamento concreto.",
+    "steps": [
+      {
+        "cliente_fala": "Adorei tudo! Tenho um casamento importante em 6 semanas e quero estar impecável.",
+        "opcoes": [
+          {
+            "texto": "Perfeito! Então vamos agendar logo, porque o ideal é fazer com pelo menos 4 semanas de antecedência para o resultado estar perfeito.",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você validou a urgência dela E criou mais urgência técnica (prazo de resultado). Fechou com maestria!",
+            "resposta_cliente": "Nossa, não sabia que precisava desse tempo! Então temos que marcar essa semana mesmo. Quando você tem disponível?"
+          },
+          {
+            "texto": "Que legal! Podemos fazer quando você quiser.",
+            "pontos": -1,
+            "tipo": "warning",
+            "feedback": "⚠️ **PERDEU OPORTUNIDADE:** Você não criou urgência! Cliente Verde com prazo definido precisa de agendamento IMEDIATO, não 'quando quiser'.",
+            "resposta_cliente": "Ah tá! Então deixa eu ver minha agenda e te aviso..."
+          },
+          {
+            "texto": "6 semanas? Ainda dá tempo! Pode deixar que você vai ficar linda.",
+            "pontos": 0,
+            "tipo": "warning",
+            "feedback": "⚠️ **GENÉRICO DEMAIS:** Você tranquilizou mas não AGIU. Cliente Verde quer ser GUIADO para o próximo passo concreto!",
+            "resposta_cliente": "Que bom! Mas quando a gente marca então?"
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Entendi! Então precisa ser essa semana mesmo. Mas meu marido só pode vir na avaliação sábado. Dá certo?",
+        "opcoes": [
+          {
+            "texto": "Dá sim! Sábado às 10h está bom para vocês? Já aproveito e vou deixar um horário separado na semana que vem para o procedimento.",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **PERFEITO!** Você confirmou a avaliação E já preparou o próximo passo (procedimento). Vendedor profissional fecha o ciclo completo!",
+            "resposta_cliente": "Perfeito! 10h está ótimo. E já deixa o procedimento agendado mesmo, assim garantimos a data!"
+          },
+          {
+            "texto": "Sábado eu não atendo. Só tenho vaga na segunda-feira.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO GRAVE:** Cliente VERDE com URGÊNCIA e você cria barreira? Você ADAPTA sua agenda para clientes assim!",
+            "resposta_cliente": "Que pena... vou ter que procurar outro profissional então, porque meu marido não pode em dia de semana."
+          },
+          {
+            "texto": "Dá sim! Confirma comigo mais perto do dia, tá bom?",
+            "pontos": -1,
+            "tipo": "warning",
+            "feedback": "⚠️ **PERDEU O FECHAMENTO:** Você deixou em aberto! Cliente pode esfriar ou aparecer 'imprevisto'. Confirme AGORA!",
+            "resposta_cliente": "Tá bom! Mas e se surgir algo? Posso remarcar depois?"
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Perfeito! Já deixa o procedimento agendado. Mas e se o resultado não ficar bom a tempo do casamento?",
+        "opcoes": [
+          {
+            "texto": "Fica tranquila! Com 4-5 semanas de antecedência, o resultado estará perfeito e qualquer ajuste fino dá tempo de fazer. Você vai estar impecável no casamento. Confirmo então: avaliação sábado 10h e procedimento na semana seguinte?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você tranquilizou a objeção, reforçou o benefício final E confirmou DUAS datas. Fechamento completo!",
+            "resposta_cliente": "Confirmado! Estou super animada. Vou mandar meus dados agora para você já cadastrar."
+          },
+          {
+            "texto": "Olha, não posso garantir 100%... cada organismo reage diferente.",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **PÉSSIMO!** Você criou INSEGURANÇA na hora do fechamento! Cliente vai desistir por medo. Seja técnico MAS confiante!",
+            "resposta_cliente": "Nossa... então não sei se é uma boa arriscar... talvez seja melhor deixar para depois do casamento."
+          },
+          {
+            "texto": "Vai ficar perfeito, pode confiar! Nunca tive problema.",
+            "pontos": 1,
+            "tipo": "warning",
+            "feedback": "⚠️ **PODE MELHORAR:** Você tranquilizou mas foi vago demais. Faltou reforçar prazo técnico + confirmar agendamento concreto.",
+            "resposta_cliente": "Tá bom então! Mas você confirma as datas comigo depois, né?"
+          }
+        ]
+      }
+    ]
+  },
+  "timeline_paula": {
+    "nome": "Paula",
+    "perfil": "🟡 SINAL AMARELO",
+    "etapa": "timeline",
+    "contexto": "Paula já confirmou que consegue parcelar, decide (mas consulta a mãe), e tem dor real (vergonha de sair sem maquiagem há 3 anos). Mas ela ainda não demonstrou URGÊNCIA clara. Você precisa criar senso de oportunidade.\n\n**Seu objetivo:** Transformar 'vou pensar' em agendamento concreto usando gatilhos de urgência.",
+    "steps": [
+      {
+        "cliente_fala": "Gostei muito da proposta! Vou conversar com minha mãe e te aviso quando vou fazer.",
+        "opcoes": [
+          {
+            "texto": "Tá bom! Me avisa quando decidir.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você deixou em aberto! Cliente Amarelo precisa de GATILHO DE URGÊNCIA ou vai 'pensar' eternamente.",
+            "resposta_cliente": "Tá bom! Qualquer coisa eu te procuro. (Nunca procurou)"
+          },
+          {
+            "texto": "Perfeito! Só para você saber: quanto mais tempo você adia, mais o problema pode se agravar e mais difícil fica o tratamento. Você consegue conversar com ela ainda essa semana?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você criou urgência TÉCNICA (problema piora) e colocou prazo específico (essa semana). Perfeito!",
+            "resposta_cliente": "Nossa, não sabia que podia piorar! Vou falar com ela ainda hoje então. Amanhã te dou um retorno."
+          },
+          {
+            "texto": "Se você fechar hoje, faço um desconto especial!",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você usou DESCONTO como gatilho de urgência. Cliente Amarelo aprende que sempre pode pedir desconto!",
+            "resposta_cliente": "Hmm... quanto de desconto? Porque se for pouco, nem vale a pena apressar..."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Vou falar com ela hoje! Mas me diz: por que piora se eu demorar muito?",
+        "opcoes": [
+          {
+            "texto": "Porque acne inflamatória pode gerar manchas e cicatrizes permanentes. Quanto antes tratar, melhor o resultado e menos sequelas. Você quer arriscar esperar mais tempo convivendo com algo que já te incomoda há 3 anos?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **PERFEITO!** Você educou tecnicamente E usou a própria dor dela (3 anos sofrendo) como gatilho. Excelente!",
+            "resposta_cliente": "Nossa, não quero cicatrizes! Então é melhor fazer logo mesmo. Vou tentar convencer minha mãe hoje ainda."
+          },
+          {
+            "texto": "Ah, porque acne sempre piora com o tempo. É assim para todo mundo.",
+            "pontos": 0,
+            "tipo": "warning",
+            "feedback": "⚠️ **GENÉRICO DEMAIS:** Você falou verdade mas foi vago. Cliente Amarelo precisa de DETALHES para criar urgência real!",
+            "resposta_cliente": "Ah tá... mas quanto tempo eu tenho então?"
+          },
+          {
+            "texto": "Olha, não quero te assustar, mas já vi casos que ficaram bem graves...",
+            "pontos": -1,
+            "tipo": "warning",
+            "feedback": "⚠️ **CUIDADO:** Criar medo excessivo pode paralisar em vez de motivar. Seja técnico mas equilibrado!",
+            "resposta_cliente": "Nossa... agora fiquei com medo. Será que já não está tarde demais para mim?"
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Faz sentido! Vou conversar com ela hoje. Mas se ela concordar, quando consigo começar?",
+        "opcoes": [
+          {
+            "texto": "Tenho vaga disponível semana que vem. Mas vai enchendo rápido por causa da época. Se ela concordar, me avisa amanhã que eu já separo um horário para você. Combinado?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você criou urgência (vagas enchendo), deu prazo específico (amanhã) E já ofereceu solução (separar horário). Perfeito!",
+            "resposta_cliente": "Perfeito! Vou falar com ela agora à noite e amanhã de manhã eu te confirmo. Pode separar a vaga?"
+          },
+          {
+            "texto": "Posso encaixar quando você quiser! Tenho bastante disponibilidade.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO GRAVE:** Você matou qualquer urgência! 'Bastante disponibilidade' = cliente pensa que pode decidir a qualquer momento.",
+            "resposta_cliente": "Ah que bom! Então não tem pressa. Vou conversar com calma com minha mãe então."
+          },
+          {
+            "texto": "Só tenho vaga daqui 3 semanas. Tem que decidir logo!",
+            "pontos": 0,
+            "tipo": "warning",
+            "feedback": "⚠️ **ARRISCADO:** Você criou urgência MAS pode estar mentindo (cliente percebe). E 3 semanas pode fazer ela desistir. Seja honesto!",
+            "resposta_cliente": "Nossa, 3 semanas? Deixa eu ver se não consigo com outro profissional antes então..."
+          }
+        ]
+      }
+    ]
+  },
+  "timeline_carla": {
+    "nome": "Carla",
+    "perfil": "🔴 SINAL VERMELHO",
+    "etapa": "timeline",
+    "contexto": "Carla está 'pesquisando' botox, não demonstrou orçamento claro, não tem dor real (só curiosidade), e já disse que 'não tem pressa'. Agora você precisa confirmar que ela NÃO TEM URGÊNCIA e desqualificar definitivamente.\n\n**Seu objetivo:** Identificar falta de timeline e liberar seu tempo sem culpa.",
+    "steps": [
+      {
+        "cliente_fala": "Gostei das informações! Mas não tenho pressa. Talvez faça ano que vem ou mais para frente.",
+        "opcoes": [
+          {
+            "texto": "Entendo! Quando estiver pronta, é só me procurar. Boa sorte na sua pesquisa!",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **PERFEITO!** Você identificou SINAL VERMELHO TOTAL (sem urgência) e desqualificou educadamente. Liberou seu tempo!",
+            "resposta_cliente": "Obrigada! Se eu decidir, entro em contato. (Pelo menos foi honesto e rápido)"
+          },
+          {
+            "texto": "Mas quanto mais cedo você começar, melhor o resultado! Que tal fazer ainda esse ano?",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você está tentando criar urgência em quem claramente NÃO TEM. Cliente Vermelho não vira Verde com pressão!",
+            "resposta_cliente": "Olha, não quero pressão. Vou fazer só quando eu realmente quiser. Obrigada."
+          },
+          {
+            "texto": "Posso te fazer um preço especial se você decidir hoje! Assim você aproveita.",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **PÉSSIMO!** Ela disse 'ANO QUE VEM' e você ofereceu desconto HOJE? Desespero total e desvalorização!",
+            "resposta_cliente": "Não, obrigada. Não vou fazer algo que não quero só porque tem desconto."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "É que não sei se realmente preciso fazer agora. Ainda estou pensando se vale a pena.",
+        "opcoes": [
+          {
+            "texto": "Entendo perfeitamente. Olha, por enquanto você pode me seguir no Instagram para ver conteúdos sobre botox. Quando sentir que é o momento certo, aí a gente conversa. Sem pressão!",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você manteve relacionamento leve (Instagram) sem desperdiçar tempo com follow-up. Profissional e respeitoso!",
+            "resposta_cliente": "Perfeito! Vou te seguir lá. Adorei a sinceridade de não ficar me pressionando."
+          },
+          {
+            "texto": "Mas deixa eu te explicar todos os benefícios do botox para você entender melhor o valor...",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **PERDENDO TEMPO:** Ela disse que não sabe se vale a pena E você insiste em vender? Cliente Vermelho não converte com discurso!",
+            "resposta_cliente": "Olha, obrigada mas acho que não quero ouvir isso agora. Vou continuar pesquisando sozinha."
+          },
+          {
+            "texto": "Sem problema! Vou te mandar mensagem todo mês para saber se você já decidiu.",
+            "pontos": -1,
+            "tipo": "warning",
+            "feedback": "⚠️ **CUIDADO:** Follow-up mensal em cliente SEM INTERESSE vai virar spam e queimar sua imagem. Evite!",
+            "resposta_cliente": "Hmm... não precisa não. Eu mesma te procuro se decidir."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Na verdade, acho que nem vou fazer. Estava só curiosa mesmo para saber como funciona.",
+        "opcoes": [
+          {
+            "texto": "Sem problema algum, Carla! Obrigado pelo interesse e qualquer dúvida no futuro, estou à disposição. Tudo de bom para você!",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **PERFEITO!** Você aceitou a resposta dela com elegância e encerrou sem criar clima ruim. Profissionalismo puro!",
+            "resposta_cliente": "Obrigada pela atenção! Se algum dia eu mudar de ideia, já sei com quem falar. (Relacionamento preservado)"
+          },
+          {
+            "texto": "Mas você nem tentou! Como sabe que não precisa se nunca fez?",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **TERRÍVEL!** Você questionou a decisão dela de forma agressiva. Isso destrói reputação e gera avaliação negativa!",
+            "resposta_cliente": "Que atitude desrespeitosa! Vou contar para minhas amigas para não procurarem você. (Dano à reputação)"
+          },
+          {
+            "texto": "Que pena! Se mudar de ideia, me procura. Tenho certeza que você ia adorar o resultado.",
+            "pontos": 1,
+            "tipo": "warning",
+            "feedback": "⚠️ **PODE MELHORAR:** Você foi educado mas ainda tentou 'plantar semente'. Com Vermelho claro, melhor só agradecer e encerrar.",
+            "resposta_cliente": "Tá bom, obrigada! (Mas ela realmente não vai procurar)"
           }
         ]
       }
