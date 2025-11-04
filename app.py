@@ -133,7 +133,6 @@ elif page.startswith('stage_'):
         st.session_state.page = 'dashboard'
         st.rerun()
 
-# Cenários dinâmicos
 elif page.startswith('scenario_'):
     scenario_key = page.replace('scenario_', '')
     
@@ -145,47 +144,16 @@ elif page.startswith('scenario_'):
             st.session_state.page = f'result_{scenario_key}'
             st.rerun()
     except KeyError:
-        st.error(f"❌ Cenário '{scenario_key}' não encontrado no scenarios.json!")
+        st.error(f"❌ Cenário '{scenario_key}' não encontrado!")
         if st.button("⬅️ Voltar ao Dashboard"):
             st.session_state.page = 'dashboard'
             st.rerun()
 
-# Resultados dinâmicos
 elif page.startswith('result_'):
     scenario_key = page.replace('result_', '')
     result_screen = ResultScreen(scenario_key)
     result_screen.show()
-    
-    st.markdown("---")
-    show_cta()
 
-# Página não encontrada
-else:
-    st.error("❌ Página não encontrada!")
-    if st.button("🏠 Voltar ao Início"):
-        st.session_state.page = 'home'
-        st.rerun()
-
-# Cenários dinâmicos
-elif page.startswith('scenario_'):
-    scenario_key = page.replace('scenario_', '')
-    scenario = Scenario(scenario_key)
-    result = scenario.show()
-    
-    if result == 'result':
-        st.session_state.page = f'result_{scenario_key}'
-        st.rerun()
-
-# Resultados dinâmicos
-elif page.startswith('result_'):
-    scenario_key = page.replace('result_', '')
-    result_screen = ResultScreen(scenario_key)
-    result_screen.show()
-    
-    st.markdown("---")
-    show_cta()
-
-# Página não encontrada
 else:
     st.error("❌ Página não encontrada!")
     if st.button("🏠 Voltar ao Início"):
