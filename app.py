@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_js_eval import streamlit_js_eval
 from components.auth import show_login, require_auth, logout
+from pages.dashboard import show_dashboard
 from components.scenario import Scenario
 from components.result import ResultScreen
 from pages.home import show_home
@@ -72,6 +73,9 @@ if page == 'home':
 
 elif page == 'sinais':
     show_sinais()
+
+elif page == 'dashboard':
+    show_dashboard()
 
 elif page == 'scenarios':
     st.markdown('<div class="big-title">Escolha um Cenário</div>', unsafe_allow_html=True)
