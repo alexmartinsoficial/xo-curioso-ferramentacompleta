@@ -128,15 +128,24 @@ class ResultScreen:
         self.mark_scenario_completed()
         
         # Botões de navegação
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
+        
         with col1:
-            if st.button("🔄 Tentar Novamente", use_container_width=True, type="primary"):
+            if st.button("🔄 Tentar Novamente", use_container_width=True):
                 self.scenario.reset()
                 st.session_state.page = f'scenario_{self.scenario.key}'
                 st.rerun()
         
         with col2:
-            if st.button("🏠 Voltar ao Dashboard", use_container_width=True):
+            # Pega a etapa atual para voltar para a seleção de cenários
+            etapa = self.scenario.data.get('etapa', 'budget')
+            if st.button("⬅️ Voltar para Cenários", use_container_width=True, type="primary"):
+                self.scenario.reset()
+                st.session_state.page = f'stage_{etapa}'
+                st.rerun()
+        
+        with col3:
+            if st.button("🏠 Dashboard", use_container_width=True):
                 self.scenario.reset()
                 st.session_state.page = 'dashboard'
                 st.rerun()
