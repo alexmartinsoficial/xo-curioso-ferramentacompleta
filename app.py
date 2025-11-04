@@ -77,9 +77,6 @@ elif page == 'sinais':
 elif page == 'dashboard':
     show_dashboard()
 
-elif page == 'dashboard':
-    show_dashboard()
-
 elif page.startswith('stage_'):
     stage_key = page.replace('stage_', '')
     
@@ -136,52 +133,36 @@ elif page.startswith('stage_'):
         st.session_state.page = 'dashboard'
         st.rerun()
 
-elif page == 'scenarios':
-    # ... resto do código
+# Cenários dinâmicos
+elif page.startswith('scenario_'):
+    scenario_key = page.replace('scenario_', '')
+    
+    try:
+        scenario = Scenario(scenario_key)
+        result = scenario.show()
+        
+        if result == 'result':
+            st.session_state.page = f'result_{scenario_key}'
+            st.rerun()
+    except KeyError:
+        st.error(f"❌ Cenário '{scenario_key}' não encontrado no scenarios.json!")
+        if st.button("⬅️ Voltar ao Dashboard"):
+            st.session_state.page = 'dashboard'
+            st.rerun()
 
-elif page == 'scenarios':
-    st.markdown('<div class="big-title">Escolha um Cenário</div>', unsafe_allow_html=True)
-    
-    st.markdown('''
-    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-                padding: 20px; 
-                border-radius: 15px; 
-                text-align: center; 
-                margin: 20px 0;
-                box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">
-        <h3 style="color: white; margin: 0; font-size: 24px;">✨ 3 Situações Reais do Dia a Dia</h3>
-    </div>
-    ''', unsafe_allow_html=True)
-    
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        st.markdown('<p style="font-size: 22px; font-weight: bold;">🟢 CENÁRIO 1: MÁRCIA</p>', unsafe_allow_html=True)
-        st.markdown("Cliente com orçamento definido. Já pesquisou e quer começar.")
-        st.markdown("*Dificuldade: Fácil*")
-        if st.button("Começar", key="start_marcia", type="primary", use_container_width=True):
-            st.session_state.page = 'scenario_marcia'
-            st.rerun()
-    
-    with col2:
-        st.markdown('<p style="font-size: 22px; font-weight: bold;">🟡 CENÁRIO 2: PAULA</p>', unsafe_allow_html=True)
-        st.markdown("Interessada mas sem verba. 'Vou ver se consigo juntar...'")
-        st.markdown("*Dificuldade: Média*")
-        if st.button("Começar", key="start_paula", type="primary", use_container_width=True):
-            st.session_state.page = 'scenario_paula'
-            st.rerun()
-    
-    with col3:
-        st.markdown('<p style="font-size: 22px; font-weight: bold;">🔴 CENÁRIO 3: CARLA</p>', unsafe_allow_html=True)
-        st.markdown("Só pesquisando preços. 'Talvez ano que vem...'")
-        st.markdown("*Dificuldade: Difícil*")
-        if st.button("Começar", key="start_carla", type="primary", use_container_width=True):
-            st.session_state.page = 'scenario_carla'
-            st.rerun()
+# Resultados dinâmicos
+elif page.startswith('result_'):
+    scenario_key = page.replace('result_', '')
+    result_screen = ResultScreen(scenario_key)
+    result_screen.show()
     
     st.markdown("---")
-    
-    if st.button("⬅️ Voltar para o Início"):
+    show_cta()
+
+# Página não encontrada
+else:
+    st.error("❌ Página não encontrada!")
+    if st.button("🏠 Voltar ao Início"):
         st.session_state.page = 'home'
         st.rerun()
 
