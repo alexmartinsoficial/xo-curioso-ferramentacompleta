@@ -5,8 +5,7 @@ from components.scenario import Scenario
 from components.result import ResultScreen
 from pages.home import show_home
 from pages.sinais import show_sinais
-from pages.dashboard import show_dashboard
-from pages.conclusao import show_conclusao
+from pages.cta import show_cta
 
 # Configuração da página
 st.set_page_config(
@@ -50,12 +49,12 @@ load_css()
 if 'page' not in st.session_state:
     st.session_state.page = 'home'
 
-# Sistema de login (ATIVE quando quiser exigir login)
-#if not require_auth():
-#    show_login()
-#    st.stop()
+# Sistema de login
+if not require_auth():
+    show_login()
+    st.stop()
 
-# Botão de logout no sidebar (quando login estiver ativo)
+# Adicionar botão de logout no sidebar (quando login estiver ativo)
 # with st.sidebar:
 #     st.markdown(f"👤 **{st.session_state.get('user_email', 'Usuário')}**")
 #     if st.button("🚪 Sair"):
@@ -74,25 +73,8 @@ if page == 'home':
 elif page == 'sinais':
     show_sinais()
 
-elif page == 'dashboard':
-    show_dashboard()
-
-elif page == 'conclusao':
-    show_conclusao()
-
-# Página de seleção de cenários por etapa
-elif page.startswith('stage_'):
-    stage_key = page.replace('stage_', '')
-    
-    # Mapear etapas para títulos bonitos
-    stage_titles = {
-        'budget': '💰 Orçamento - Tem Grana no Bolso?',
-        'authority': '👑 Poder de Decisão - Quem Assina o Cheque?',
-        'need': '🔥 Necessidade - Dor Real ou Só Olhando?',
-        'timeline': '⏰ Urgência - Quer Agora ou 2030?'
-    }
-    
-    st.markdown(f'<div class="big-title">{stage_titles.get(stage_key, "Escolha um Cenário")}</div>', unsafe_allow_html=True)
+elif page == 'scenarios':
+    st.markdown('<div class="big-title">Escolha um Cenário</div>', unsafe_allow_html=True)
     
     st.markdown('''
     <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
@@ -111,62 +93,50 @@ elif page.startswith('stage_'):
         st.markdown('<p style="font-size: 22px; font-weight: bold;">🟢 CENÁRIO 1: MÁRCIA</p>', unsafe_allow_html=True)
         st.markdown("Cliente com orçamento definido. Já pesquisou e quer começar.")
         st.markdown("*Dificuldade: Fácil*")
-        if st.button("Começar", key=f"start_{stage_key}_marcia", type="primary", use_container_width=True):
-            st.session_state.page = f'scenario_{stage_key}_marcia'
+        if st.button("Começar", key="start_marcia", type="primary", use_container_width=True):
+            st.session_state.page = 'scenario_marcia'
             st.rerun()
     
     with col2:
         st.markdown('<p style="font-size: 22px; font-weight: bold;">🟡 CENÁRIO 2: PAULA</p>', unsafe_allow_html=True)
         st.markdown("Interessada mas sem verba. 'Vou ver se consigo juntar...'")
         st.markdown("*Dificuldade: Média*")
-        if st.button("Começar", key=f"start_{stage_key}_paula", type="primary", use_container_width=True):
-            st.session_state.page = f'scenario_{stage_key}_paula'
+        if st.button("Começar", key="start_paula", type="primary", use_container_width=True):
+            st.session_state.page = 'scenario_paula'
             st.rerun()
     
     with col3:
         st.markdown('<p style="font-size: 22px; font-weight: bold;">🔴 CENÁRIO 3: CARLA</p>', unsafe_allow_html=True)
         st.markdown("Só pesquisando preços. 'Talvez ano que vem...'")
         st.markdown("*Dificuldade: Difícil*")
-        if st.button("Começar", key=f"start_{stage_key}_carla", type="primary", use_container_width=True):
-            st.session_state.page = f'scenario_{stage_key}_carla'
+        if st.button("Começar", key="start_carla", type="primary", use_container_width=True):
+            st.session_state.page = 'scenario_carla'
             st.rerun()
     
     st.markdown("---")
     
-    if st.button("⬅️ Voltar ao Dashboard"):
-        st.session_state.page = 'dashboard'
+    if st.button("⬅️ Voltar para o Início"):
+        st.session_state.page = 'home'
         st.rerun()
 
-# Cenários dinâmicos (ex: scenario_budget_marcia)
+# Cenários dinâmicos
 elif page.startswith('scenario_'):
-    # Extrai stage e scenario key (ex: budget_marcia)
-    parts = page.replace('scenario_', '').split('_', 1)
+    scenario_key = page.replace('scenario_', '')
+    scenario = Scenario(scenario_key)
+    result = scenario.show()
     
-    if len(parts) == 2:
-        stage_key, scenario_key = parts
-        full_scenario_key = f"{stage_key}_{scenario_key}"
-        scenario = Scenario(full_scenario_key)
-        result = scenario.show()  # ✅ FALTAVA ISSO!
-        
-        if result == 'result':
-            st.session_state.page = f'result_{full_scenario_key}'  # ✅ MUDOU AQUI TAMBÉM
-            st.rerun()
-            
-    elif len(parts) == 1:
-        # Compatibilidade com cenários antigos (marcia, paula, carla)
-        scenario_key = parts[0]
-        scenario = Scenario(scenario_key)
-        result = scenario.show()
-        
-        if result == 'result':
-            st.session_state.page = f'result_{scenario_key}'
-            st.rerun()
-            
+    if result == 'result':
+        st.session_state.page = f'result_{scenario_key}'
+        st.rerun()
+
 # Resultados dinâmicos
 elif page.startswith('result_'):
     scenario_key = page.replace('result_', '')
     result_screen = ResultScreen(scenario_key)
     result_screen.show()
+    
+    st.markdown("---")
+    show_cta()
 
 # Página não encontrada
 else:
