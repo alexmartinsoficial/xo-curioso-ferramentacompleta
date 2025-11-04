@@ -1,1 +1,260 @@
-
+{
+  "marcia": {
+    "nome": "Márcia",
+    "perfil": "🟢 SINAL VERDE",
+    "etapa": "budget",
+    "contexto": "Uma potencial cliente chamada **Márcia (35 anos)** enviou mensagem no WhatsApp perguntando sobre harmonização facial.\n\n**Seu objetivo:** Descobrir se ela TEM ORÇAMENTO sem parecer mercenário e sem dar desconto desnecessário.",
+    "steps": [
+      {
+        "cliente_fala": "Oi! Vi suas fotos no Instagram. Quanto custa harmonização facial completa?",
+        "opcoes": [
+          {
+            "texto": "Custa R$ 3.500",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você passou o preço direto sem criar valor ou qualificar. Ela vai comparar com outros 5 profissionais só por preço.",
+            "resposta_cliente": "Nossa, achei caro. Vou ver outros profissionais. Obrigada!"
+          },
+          {
+            "texto": "Antes de falar sobre valores, me conta: você já pesquisou sobre o procedimento?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **ÓTIMO!** Você não entregou o preço de bandeja e começou a qualificar. Criou rapport antes de vender.",
+            "resposta_cliente": "Já sim! Já fiz toxina antes e agora quero fazer preenchimento também. Pesquisei bastante."
+          },
+          {
+            "texto": "Posso te passar um orçamento! Quando você pode vir aqui para avaliação?",
+            "pontos": 1,
+            "tipo": "warning",
+            "feedback": "⚠️ **PODE MELHORAR:** Você tentou avançar mas não qualificou se ela tem orçamento. Pode perder tempo com avaliação gratuita.",
+            "resposta_cliente": "Posso ir semana que vem. Mas antes, quanto custa mais ou menos?"
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Legal! E quanto custa mais ou menos?",
+        "opcoes": [
+          {
+            "texto": "Entre R$ 2.500 e R$ 4.000. Você já tem uma ideia de quanto pode investir?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você deu uma faixa E qualificou o orçamento dela. Perfeito!",
+            "resposta_cliente": "Tenho uns R$ 4.000 guardados para isso. Dá para fazer um bom trabalho?"
+          },
+          {
+            "texto": "Depende muito do caso. Melhor vir fazer avaliação.",
+            "pontos": 0,
+            "tipo": "warning",
+            "feedback": "⚠️ **EVASIVO:** Você não respondeu a pergunta dela. Clientes querem transparência.",
+            "resposta_cliente": "Mas você não consegue me dar nem uma ideia? Preciso saber se cabe no meu orçamento."
+          },
+          {
+            "texto": "Normalmente R$ 3.500, mas posso fazer por R$ 3.000 se você fechar hoje.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você deu desconto SEM NEM SABER se ela precisa! Desvalorizou seu trabalho.",
+            "resposta_cliente": "Ah legal! Então fica R$ 3.000 mesmo? Vou pensar..."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Tenho uns R$ 4.000 guardados. Dá para fazer um bom trabalho com isso?",
+        "opcoes": [
+          {
+            "texto": "Dá sim! Mas preciso avaliar para fazer um plano exato. Tem urgência para fazer?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **PERFEITO!** Confirmou o orçamento E já começou a qualificar urgência (Timeline). Excelente!",
+            "resposta_cliente": "Tenho sim! Tenho um casamento em 6 semanas e quero estar linda."
+          },
+          {
+            "texto": "Dá! Quando você quer marcar a avaliação?",
+            "pontos": 2,
+            "tipo": "success",
+            "feedback": "✅ **BOM!** Você avançou para o próximo passo, mas perdeu chance de qualificar urgência.",
+            "resposta_cliente": "Posso ir semana que vem!"
+          },
+          {
+            "texto": "Para fazer completo fica R$ 5.500. Consegue aumentar o orçamento?",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **PÉSSIMO!** Ela tem R$ 4.000 e você pediu mais! Perdeu a cliente.",
+            "resposta_cliente": "Não posso gastar mais que isso. Vou procurar outro lugar. Obrigada."
+          }
+        ]
+      }
+    ]
+  },
+  "paula": {
+    "nome": "Paula",
+    "perfil": "🟡 SINAL AMARELO",
+    "etapa": "budget",
+    "contexto": "Uma potencial cliente chamada **Paula (28 anos)** ligou perguntando sobre limpeza de pele profunda e tratamentos faciais.\n\n**Seu objetivo:** Descobrir se ela tem condições de investir AGORA ou se vai \"pensar para sempre\". Você precisa criar urgência e educar sobre valor.",
+    "steps": [
+      {
+        "cliente_fala": "Oi! Queria saber quanto custa um tratamento completo de pele. Tenho muita acne.",
+        "opcoes": [
+          {
+            "texto": "O tratamento custa R$ 2.800 no total. Consegue fazer?",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você jogou o preço sem criar valor. Paula vai achar caro e desistir.",
+            "resposta_cliente": "Nossa, é caro. Vou ver se consigo juntar esse dinheiro..."
+          },
+          {
+            "texto": "Entendi. Antes de falar sobre valores, me conta: há quanto tempo você tem esse problema?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **ÓTIMO!** Você começou entendendo a dor dela antes de falar de preço. Criando valor e rapport!",
+            "resposta_cliente": "Ah, faz uns 3 anos já. Já tentei vários produtos mas não resolveu."
+          },
+          {
+            "texto": "Posso fazer uma avaliação gratuita! Quando pode vir?",
+            "pontos": 0,
+            "tipo": "warning",
+            "feedback": "⚠️ **CUIDADO:** Avaliação grátis sem qualificar orçamento? Pode virar \"turismo de consultório\".",
+            "resposta_cliente": "Posso! Mas antes queria saber se é muito caro..."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Legal! E quanto custa mais ou menos esse tratamento?",
+        "opcoes": [
+          {
+            "texto": "Varia entre R$ 2.000 e R$ 3.500. Vou ver os detalhes do seu caso e te mando um orçamento.",
+            "pontos": 1,
+            "tipo": "warning",
+            "feedback": "⚠️ **PODE MELHORAR:** Você deu a faixa mas não qualificou se ela tem condição de pagar. Pode perder tempo.",
+            "resposta_cliente": "Tá bom. Mas não sei se tenho esse dinheiro todo agora..."
+          },
+          {
+            "texto": "Varia entre R$ 2.000 e R$ 3.500 dependendo do caso. Você já separou algum valor para tratar isso?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você deu a faixa E qualificou o orçamento dela diretamente. Perfeito!",
+            "resposta_cliente": "Não tenho tudo guardado ainda... estava pensando em uns R$ 1.500 só."
+          },
+          {
+            "texto": "Normalmente R$ 2.800, mas se você fechar hoje faço por R$ 2.200.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO GRAVE:** Desconto logo de cara em cliente AMARELO? Você confirmou que ela pode SEMPRE pedir desconto!",
+            "resposta_cliente": "Hmm... ainda acho caro. Consegue fazer por R$ 2.000?"
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Seria em torno de R$ 2.800 então? Mas eu não tenho esse dinheiro guardado agora...",
+        "opcoes": [
+          {
+            "texto": "Entendo. Você conseguiria organizar em quanto tempo? Pergunto porque quanto mais tempo adia, mais o problema pode se agravar.",
+            "pontos": 2,
+            "tipo": "success",
+            "feedback": "✅ **BOM!** Você investigou o prazo E criou urgência. Mas poderia ter oferecido solução de pagamento.",
+            "resposta_cliente": "Acho que em 2 meses consigo juntar. Você trabalha com parcelamento?"
+          },
+          {
+            "texto": "Sem problema! Quando tiver o dinheiro, você me procura.",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **PERDEU A CLIENTE!** Você desistiu fácil demais. Cliente Amarelo precisa de educação e facilitação, não desistência.",
+            "resposta_cliente": "Tá bom então. Obrigada! (Ela nunca mais voltou)"
+          },
+          {
+            "texto": "Trabalho com parcelamento, geralmente entre 3x e 6x. As parcelas ficam entre R$ 450 e R$ 950. Na avaliação vejo seu caso e monto o melhor plano. Essa faixa cabe para você?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **PERFEITO!** Você deu faixa clara (qualificou), não deu exatidão (precisa ir na avaliação), e mencionou vantagem. Excelente!",
+            "resposta_cliente": "Acho que sim! Vou ver direitinho mas parece que dá. Quando posso ir fazer a avaliação?"
+          }
+        ]
+      }
+    ]
+  },
+  "carla": {
+    "nome": "Carla",
+    "perfil": "🔴 SINAL VERMELHO",
+    "etapa": "budget",
+    "contexto": "Uma pessoa chamada **Carla (42 anos)** ligou \"só para saber informações\" sobre procedimentos estéticos.\n\n**Seu objetivo:** Identificar rapidamente que ela NÃO vai fechar e não desperdiçar seu tempo. Aprenda a desqualificar sem culpa.",
+    "steps": [
+      {
+        "cliente_fala": "Oi, tudo bem? Queria saber quanto custa botox. É só para ter uma ideia mesmo.",
+        "opcoes": [
+          {
+            "texto": "Botox custa R$ 1.200. Quer agendar uma avaliação?",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você deu o preço e ofereceu avaliação para quem claramente disse \"só quero ideia\". Vai perder tempo!",
+            "resposta_cliente": "Ah tá. Vou ver outros lugares também. Obrigada!"
+          },
+          {
+            "texto": "Claro! Mas antes, me conta: você está pensando em fazer quando?",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **ÓTIMO!** Você está qualificando a urgência ANTES de dar informações. Descobrindo se vale seu tempo.",
+            "resposta_cliente": "Ah, não sei ainda... Talvez ano que vem. Estou só pesquisando preços mesmo."
+          },
+          {
+            "texto": "Posso fazer uma avaliação gratuita! Quando você pode vir?",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **PÉSSIMO!** Ela disse \"só queria saber\" e você ofereceu avaliação grátis? Turismo de consultório garantido!",
+            "resposta_cliente": "Ah não sei, tô bem sem tempo. Só queria o preço mesmo."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "É que não tenho pressa. Só estou vendo quanto custa em vários lugares.",
+        "opcoes": [
+          {
+            "texto": "Entendo. Deixa eu te passar alguns materiais educativos sobre botox. Quando decidir, pode me procurar!",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **PERFEITO!** Você identificou o Sinal Vermelho e não desperdiçou tempo. Educou brevemente e liberou sua energia.",
+            "resposta_cliente": "Legal, obrigada! Se eu decidir, entro em contato."
+          },
+          {
+            "texto": "Mas posso te fazer um preço especial se você decidir hoje! Que tal R$ 1.000?",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **TERRÍVEL!** Você deu desconto para quem NÃO TEM URGÊNCIA e está \"só pesquisando\"! Desvalorizou totalmente seu trabalho.",
+            "resposta_cliente": "Hmm, ainda acho caro. Vou continuar pesquisando."
+          },
+          {
+            "texto": "Entendo, mas deixa eu te explicar todos os benefícios do botox...",
+            "pontos": -1,
+            "tipo": "warning",
+            "feedback": "⚠️ **PERDENDO TEMPO:** Ela já disse que não tem pressa e você insiste em vender. Cliente Vermelho não vira Verde com discurso.",
+            "resposta_cliente": "Tá, obrigada pelas informações. Vou pensar com calma."
+          }
+        ]
+      },
+      {
+        "cliente_fala": "Você faz pagamento parcelado? Porque agora não tenho como pagar à vista.",
+        "opcoes": [
+          {
+            "texto": "Faço sim! Parcelo em até 6x. Quer agendar para quando?",
+            "pontos": -2,
+            "tipo": "danger",
+            "feedback": "❌ **ERRO:** Você está facilitando demais para quem não demonstrou interesse real. Ela vai \"pensar\" eternamente.",
+            "resposta_cliente": "Deixa eu ver certinho minha situação financeira e eu te aviso..."
+          },
+          {
+            "texto": "Faço parcelado sim, mas só para quem está pronto para começar. Pelo que você falou, não parece ser o momento ideal para você investir nisso agora.",
+            "pontos": 3,
+            "tipo": "success",
+            "feedback": "✅ **EXCELENTE!** Você foi direto e honesto. Desqualificou educadamente e não criou falsas expectativas. Profissionalismo!",
+            "resposta_cliente": "É verdade, não é o melhor momento mesmo. Quando for a hora certa, entro em contato."
+          },
+          {
+            "texto": "Sim! E se você trouxer uma amiga, dou 20% de desconto para as duas!",
+            "pontos": -3,
+            "tipo": "danger",
+            "feedback": "❌ **DESESPERO!** Você está oferecendo desconto E indicação para alguém que claramente não vai fechar. Parou de se valorizar.",
+            "resposta_cliente": "Ah que legal! Vou ver com minhas amigas e a gente vê... (nunca mais apareceu)"
+          }
+        ]
+      }
+    ]
+  }
+}
