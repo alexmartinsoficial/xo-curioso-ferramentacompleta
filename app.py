@@ -144,11 +144,12 @@ elif page.startswith('scenario_'):
     
     if len(parts) == 2:
         stage_key, scenario_key = parts
-        full_scenario_key = f"{stage_key}_{scenario_key}"  # ✅ CORRETO
+        full_scenario_key = f"{stage_key}_{scenario_key}"
         scenario = Scenario(full_scenario_key)
+        result = scenario.show()  # ✅ FALTAVA ISSO!
         
         if result == 'result':
-            st.session_state.page = f'result_{scenario_key}'
+            st.session_state.page = f'result_{full_scenario_key}'  # ✅ MUDOU AQUI TAMBÉM
             st.rerun()
             
     elif len(parts) == 1:
@@ -160,7 +161,7 @@ elif page.startswith('scenario_'):
         if result == 'result':
             st.session_state.page = f'result_{scenario_key}'
             st.rerun()
-
+            
 # Resultados dinâmicos
 elif page.startswith('result_'):
     scenario_key = page.replace('result_', '')
